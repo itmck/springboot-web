@@ -16,7 +16,7 @@ public class Index {
 
     @RequestMapping("/view")
     public ModelAndView view2(){
-        ModelAndView mv=new ModelAndView("index");
+        ModelAndView mv=new ModelAndView("login_max");
         return mv;
     }
 

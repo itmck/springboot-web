@@ -19,6 +19,11 @@
 //@EnableWebMvc
 //public class MyMvcConfig extends WebMvcConfigurerAdapter {
 //
+//    /**
+//     *
+//     * 视图解析
+//     * @return
+//     */
 //    @Bean
 //    public ViewResolver getViewResolver() {
 //        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -32,6 +37,11 @@
 //        configurer.enable();
 //    }
 //
+//    /**
+//     *
+//     * 过滤静态资源
+//     * @param registry
+//     */
 //    @Override
 //    public void addResourceHandlers(ResourceHandlerRegistry registry) {
 //        registry.addResourceHandler("/static/**").addResourceLocations("/WEB-INF/static/");
