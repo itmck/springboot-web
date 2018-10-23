@@ -27,11 +27,8 @@ public class ActionController {
     @RequestMapping(value = "get")
     @ResponseBody
     public Map<String,Object> getMsg(){
-
         Map<String,Object> map = new HashMap<>();
-
         List<User> list = userService.getAllUser();
-
         map.put("userList",list);
         return map;
 
