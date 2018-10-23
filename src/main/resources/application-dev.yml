@@ -1,7 +1,9 @@
+#tomcat
 server:
   port: 81
   servlet:
     context-path: /mck
+#mysql
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
