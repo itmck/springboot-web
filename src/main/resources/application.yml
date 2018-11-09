@@ -1,15 +1,37 @@
+
+##整体配置##
 spring:
   #开发环境 dev|pro
   profiles:
     active: dev
-#视图解析
+##=============================start
+##s这里面的配置是spring视图解析与静态资源过滤 若不配置此项可以参考 MyMvcConfig 这种方式 在config文件夹中
+#s#pring mvc视图解析
   mvc:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+
 #  描述静态资源存放位置
   resources:
     static-locations: classpath:/webapp/static,classpath:/static,classpath:/public,classpath:/resources,classpath:/META-INF/resources
+##======================================= end
+##spring整合freemark时,配置视图解析
+#freemark视图解析
+  freemarker:
+    check-template-location: true
+    charset: utf-8
+    # 关闭缓存，及时刷新，上线生产环境需要修改为true
+    cache: false
+    allow-request-override: true
+    suffix: .ftl
+    content-type: text/html
+    allow-session-override: false
+    template-loader-path: /WEB-INF/jsp/template/
+    expose-request-attributes: true
+    expose-session-attributes: true
+
+##spring整合mybatis
 ## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
 mybatis:
   mapper-locations: classpath*:com/**/*Mapper.xml  #注意：一定要对应mapper映射xml文件的所在路径
