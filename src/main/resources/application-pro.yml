@@ -1,5 +1,4 @@
 ##生产环境配置##
-
 server:
   servlet:
     context-path: /wxp

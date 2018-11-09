@@ -1,6 +1,4 @@
-##开发环境配置##
-
-#tomcat
+#开发环境配置
 server:
   port: 81
   servlet:
