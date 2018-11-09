@@ -12,4 +12,8 @@ import java.util.List;
  */
 public interface UserService {
     List<User> getAllUser();
+
+    String getRole(String username);
+
+//    boolean binCode(String phone, String s);
 }

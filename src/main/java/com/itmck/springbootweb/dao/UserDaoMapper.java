@@ -15,6 +15,13 @@ import java.util.List;
 @Mapper
 @Repository
 public interface UserDaoMapper {
-    //@Select(value = "select * from user")
+
+    //获取所有
     List<User> getAll();
+
+    //根据用户名获取密码
+    String getPassword(String username);
+
+    //根据用户名获取角色
+    String getRole(String username);
 }
