@@ -15,5 +15,7 @@ public interface UserService {
 
     String getRole(String username);
 
+    String getPassword(String username);
+
 //    boolean binCode(String phone, String s);
 }

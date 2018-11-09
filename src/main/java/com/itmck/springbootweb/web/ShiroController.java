@@ -20,13 +20,13 @@ import java.util.Map;
  * @Version: 1.0
  */
 @Controller
-@RequestMapping("shiro")
+@RequestMapping("/shiro")
 public class ShiroController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping("login")
+    @RequestMapping("/login")
     @ResponseBody
     public Map<String,Object> login(String username, String password){
         Map<String,Object> map = new HashMap<>();
@@ -51,11 +51,24 @@ public class ShiroController {
     }
 
 
-    /**
-     * 注销
-     * @return
-     */
+    @RequestMapping(value = "/notLogin", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> notLogin() {
+        Map<String,Object> map = new HashMap<>();
+        map.put("msg","您尚未登陆！");
+        return map;
+    }
+
+    @RequestMapping(value = "/notRole", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object> notRole() {
+        Map<String,Object> map = new HashMap<>();
+        map.put("msg","您没有权限！");
+        return map;
+    }
+
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    @ResponseBody
     public Map<String,Object> logout() {
         Map<String,Object> map = new HashMap<>();
         Subject subject = SecurityUtils.getSubject();

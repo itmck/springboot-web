@@ -33,6 +33,10 @@ public class UserServiceImpl implements UserService {
         return userDaoMapper.getRole(username);
     }
 
+    @Override
+    public String getPassword(String username) {
+        return userDaoMapper.getPassword(username);
+    }
 
 //    @Override
 //    public boolean binCode(String phone, String redisKey) {
