@@ -11,10 +11,24 @@ import java.util.List;
  * @Version: 1.0
  */
 public interface UserService {
+    /**
+     * 获取所有的用户
+     * @return
+     */
     List<User> getAllUser();
 
+    /**
+     * 获取所有的角色
+     * @param username
+     * @return
+     */
     String getRole(String username);
 
+    /**
+     * 根据用户名获取密码
+     * @param username
+     * @return
+     */
     String getPassword(String username);
 
 //    boolean binCode(String phone, String s);

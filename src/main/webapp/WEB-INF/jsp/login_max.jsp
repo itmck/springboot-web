@@ -16,7 +16,7 @@
 <body>
 <div id="main">
     <div id="content">
-        <form action="${pageContext.request.contextPath}/shiro/login" method="post">
+        <form action="${pageContext.request.contextPath}/ss/login" method="post">
             <h4 id="theam">"Game live"登录</h4>
             <input type="text" name="username" placeholder="姓名"
                    style="border-bottom: 1px solid darkgray;"/><br/> <input

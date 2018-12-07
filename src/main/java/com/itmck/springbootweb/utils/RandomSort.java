@@ -2,6 +2,10 @@ package com.itmck.springbootweb.utils;
 
 import java.util.Random;
 
+/**
+ *
+ * 自定义生成随机数类
+ */
 public class RandomSort {
 	public final static String randStr = "0123456789abcdefghijklmnopqrstuvwxyz"; // 写入你所希望的所有的字母A-Z,a-z,0-9
 	public final static String randNumStr = "123456789"; // 

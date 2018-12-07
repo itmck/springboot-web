@@ -3,7 +3,7 @@ package com.itmck.springbootweb.utils;
 /**
  * Create by it_mck 2018/11/2 11:29
  *
- * @Description:
+ * @Description: 封装一些经常使用的常量
  * @Version: 1.0
  */
 public class RedisKeyConst {

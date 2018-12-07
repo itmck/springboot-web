@@ -13,34 +13,41 @@ import org.springframework.web.servlet.ModelAndView;
  * @Version: 1.0
  */
 @RestController
-@RequestMapping("i")
-public class IndexController {
+@RequestMapping("ss")
+public class LoginController {
 
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/view")
+    /**
+     * 跳转至登录页面
+     * @return
+     */
+    @RequestMapping("system")
     public ModelAndView view2(){
         ModelAndView mv=new ModelAndView("login_max");
         return mv;
     }
+
+    /**
+     * 登录验证
+     * @param username
+     * @param password
+     * @return
+     */
     @RequestMapping("/login")
-    public String  login(String username,String password){
-
+    public ModelAndView  login(String username,String password){
+        ModelAndView mv=new ModelAndView();
         String  upwd = userService.getPassword(username);
-
         if(!password.equals(upwd)){
-
-            return "success";
+            mv.addObject("index");
+            mv.setViewName("index");
         }else{
-
+            mv.addObject("fail");
+            mv.setViewName("fail");
         }
-
-        return "failed";
+        return mv;
     }
-
-
-
 
     /**
      * 获取验证码步骤

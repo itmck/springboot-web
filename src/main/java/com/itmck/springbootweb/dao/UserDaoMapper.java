@@ -1,8 +1,8 @@
 package com.itmck.springbootweb.dao;
 
+import com.itmck.springbootweb.common.BaseMapper;
 import com.itmck.springbootweb.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -12,9 +12,8 @@ import java.util.List;
  * @Description:
  * @Version: 1.0
  */
-@Mapper
-@Repository
-public interface UserDaoMapper {
+@Mapper//配置mapper注解扫描
+public interface UserDaoMapper extends BaseMapper<User,Integer> {
 
     //获取所有
     List<User> getAll();
